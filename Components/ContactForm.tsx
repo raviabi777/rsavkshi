@@ -1,12 +1,15 @@
-// ContactForm.tsx
 import React, { useState } from 'react';
 
-const ContactForm = ({ closeModal }) => {
+interface ContactFormProps {
+  closeModal: () => void;
+}
+
+const ContactForm: React.FC<ContactFormProps> = ({ closeModal }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Implement your message sending logic here
     alert(`Message sent by ${name} (${email}): ${message}`);
