@@ -20,7 +20,7 @@ export const Projects = () => {
         {projectData.map((project, index) => (
           <div key={index} data-aos="fade-up" data-aos-delay={index * 300}>
             <div className="project-container transform cursor-pointer hover:-translate-y-6 transition-all duration-200 relative w-[100%] h-[200px] md:h-[300px]">
-              <Image src={project.src} alt={project.alt} layout="fill" className="object-contain" />
+              <Image src={project.src} alt={project.alt} fill className="object-contain" />
               <div className="project-overlay absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-70">
                 <p className="text-white text-center">{project.description}</p>
               </div>
